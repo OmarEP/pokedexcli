@@ -1,18 +1,15 @@
-package main 
+package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func callbackHelp(cfg *config) error {
-	fmt.Println("Welcome to the Pokedex help menu!")
-	fmt.Println("Here are your available commands:")
-	
-	availableCommands := getCommands()
-	for _, cmd := range availableCommands {
-		fmt.Printf(" - %s - %s\n", cmd.name, cmd.description)
+func commandHelp(cfg *config, args ...string) error {
+	fmt.Println()
+	fmt.Println("Welcome to the Pokedex!")
+	fmt.Println("Usage:")
+	fmt.Println()
+	for _, cmd := range getCommands() {
+		fmt.Printf("%s: %s\n", cmd.name, cmd.description)
 	}
-
-	fmt.Println("")
+	fmt.Println()
 	return nil
 }
