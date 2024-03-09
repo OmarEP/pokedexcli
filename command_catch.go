@@ -1,8 +1,8 @@
-package main
+package main 
 
-import (
-	"errors"
+import(
 	"fmt"
+	"errors"
 	"math/rand"
 )
 

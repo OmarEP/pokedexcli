@@ -1,8 +1,8 @@
 package main
 
 import (
-	"errors"
 	"fmt"
+	"errors"
 )
 
 func commandInspect(cfg *config, args ...string) error {

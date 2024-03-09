@@ -6,7 +6,6 @@ import (
 	"net/http"
 )
 
-// GetPokemon -
 func (c *Client) GetPokemon(pokemonName string) (Pokemon, error) {
 	url := baseURL + "/pokemon/" + pokemonName
 
@@ -44,4 +43,5 @@ func (c *Client) GetPokemon(pokemonName string) (Pokemon, error) {
 	c.cache.Add(url, dat)
 
 	return pokemonResp, nil
+
 }

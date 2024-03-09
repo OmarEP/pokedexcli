@@ -1,8 +1,8 @@
 package main
 
 import (
-	"errors"
 	"fmt"
+	"errors"
 )
 
 func commandExplore(cfg *config, args ...string) error {
@@ -11,9 +11,11 @@ func commandExplore(cfg *config, args ...string) error {
 	}
 
 	name := args[0]
+
+
 	location, err := cfg.pokeapiClient.GetLocation(name)
 	if err != nil {
-		return err
+		return err 
 	}
 	fmt.Printf("Exploring %s...\n", location.Name)
 	fmt.Println("Found Pokemon: ")
@@ -21,4 +23,4 @@ func commandExplore(cfg *config, args ...string) error {
 		fmt.Printf(" - %s\n", enc.Pokemon.Name)
 	}
 	return nil
-}
+} 
